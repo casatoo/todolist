@@ -1,0 +1,42 @@
+server:
+  port: 8080
+  
+spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mliukn@gmail.com
+    password: ifhzzyufokuzzisv
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://1.234.44.77:3306/SB_AM?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useOldAliasMetadataBehavior=true&zeroDateTimeNehavior=convertToNull
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/TodoList?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useOldAliasMetadataBehavior=true&zeroDateTimeNehavior=convertToNull
+    username: user1
+    password: mkop9074!@
+mybatis:
+  type-aliases-package: com.kms.java.todoList.vo
+custom:
+  genFileDirPath: C:\springworkspace\workspace-spring-tool-suite-4-4.16.0.RELEASE\todoList
+  siteName: TodoList
+  siteMainUri: http://localhost:8080
+  emailFrom: no-reply@localhost
+  emailFromName: TodoList
+  logging:
+    dir: log
+    level: debug
+ 
